@@ -1,8 +1,7 @@
-## weibo
-仿照weibo做的一个Java web项目。
+# weibo
+仿照weibo做的一个Java web项目。使用SpringBoot加MyBatis开发。主要内容包括：
 
 ## 项目基础配置
-> 新建一个
 
 
     创建一个SpringBoot工程。
