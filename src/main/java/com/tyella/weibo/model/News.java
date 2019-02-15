@@ -23,6 +23,10 @@ public class News {
 
     private int commentCount;
 
+    public News(){
+
+    }
+
     public News(int id, String title, String link, String image, Date createdDate, int userId, int likeCount, int commentCount) {
         this.id = id;
         this.title = title;
