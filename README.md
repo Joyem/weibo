@@ -33,7 +33,9 @@
     
     后续开发增加其他功能时再新建其他表。
     
-    接下来写controller,dao,service。注意MyBatis的注解语法以及xml配置要求。xml要求写在resource中并且与dao接口在相同的包路径。
+    接下来写controller,dao,service。注意MyBatis的注解语法以及xml配置要求。
+    
+    xml要求写在resource中并且与dao接口在相同的包路径。
     
     application.peoperties增加spring配置数据库链接地址。
     
@@ -101,7 +103,9 @@
     
     存在一个集合，不喜欢的存在另一个集合。通过统计数量可以获得点赞和点踩数。
     
-    一般点赞点踩操作是先修改Redis的值并获取返回值，然后再异步修改MySQL数据库的likecount数值。这样既可以保证点赞操作快速完成，也可保证数据一致性。
+    一般点赞点踩操作是先修改Redis的值并获取返回值，然后再异步修改MySQL数据库的likecount数值。
+    
+    这样既可以保证点赞操作快速完成，也可保证数据一致性。
     
     
     
