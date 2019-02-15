@@ -27,4 +27,5 @@ public class CommentService {
     public int getCommentCount(int entityId,int entityType){
         return commentDao.getCommentCount(entityId,entityType);
     }
+
 }

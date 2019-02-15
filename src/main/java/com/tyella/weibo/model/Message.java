@@ -17,9 +17,9 @@ public class Message {
 
     private Date createDate;
 
-    private String hasRead;
+    private int hasRead;
 
-    private int conversationId;
+    private String conversationId;
 
     public int getId() {
         return id;
@@ -61,19 +61,19 @@ public class Message {
         this.createDate = createDate;
     }
 
-    public String getHasRead() {
+    public int getHasRead() {
         return hasRead;
     }
 
-    public void setHasRead(String hasRead) {
+    public void setHasRead(int hasRead) {
         this.hasRead = hasRead;
     }
 
-    public int getConversationId() {
+    public String getConversationId() {
         return conversationId;
     }
 
-    public void setConversationId(int conversationId) {
+    public void setConversationId(String conversationId) {
         this.conversationId = conversationId;
     }
 }
