@@ -16,6 +16,10 @@ public class EventModel {
     //触发现场的信息保存
     private Map<String,String> exts=new HashMap<>();
 
+    public EventModel(EventType eventType){
+        this.eventType=eventType;
+    }
+
     //使用return this让代码执行链路化操作 set set set
     //后面的set都使用此种方法
     public EventModel setExts(String key,String value){

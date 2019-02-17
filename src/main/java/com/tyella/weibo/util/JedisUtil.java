@@ -9,8 +9,6 @@ import redis.clients.jedis.Jedis;
 
 import java.util.List;
 
-//TODO
-//service注解
 @Service
 public class JedisUtil implements InitializingBean{
     private static final Logger logger= LoggerFactory.getLogger(JedisPool.class);
