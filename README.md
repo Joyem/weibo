@@ -1,5 +1,5 @@
 # weibo
-仿照weibo做的一个Java web项目。使用SpringBoot加MyBatis开发。主要内容包括：
+仿照weibo做的一个Java web项目。使用SpringBoot加MyBatis开发。主要内容包括：开发工具和Java语言、Spring入门、数据库交互MyBatis集成、用户注册登录管理、资讯发布、图片上传、评论中心、Redis实现“点赞”和“点踩”功能、异步设计、JavaWeb项目测试
 
 ## 项目基础配置
 
