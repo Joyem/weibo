@@ -25,22 +25,22 @@ public class NewsController {
     private static final Logger logger = LoggerFactory.getLogger(NewsController.class);
 
     @Autowired
-    private NewsService newsService;
+    NewsService newsService;
 
     @Autowired
-    private LikeService likeService;
+    LikeService likeService;
 
     @Autowired
-    private UserService userService;
+    UserService userService;
 
     @Autowired
-    private UserHolder userHolder;
+    UserHolder userHolder;
 
     @Autowired
-    private CommentService commentService;
+    CommentService commentService;
 
     @Autowired
-    private AliService aliService;
+    AliService aliService;
 
     @RequestMapping(path = {"/news/{newsId}"}, method = {RequestMethod.GET})
     public String newsDetail(@PathVariable("newsId") int newsId, Model model) {
