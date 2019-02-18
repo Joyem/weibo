@@ -5,6 +5,7 @@ import com.tyella.weibo.dao.UserDao;
 import com.tyella.weibo.model.LoginTicket;
 import com.tyella.weibo.model.User;
 import com.tyella.weibo.util.WeiboUtil;
+import com.tyella.weibo.util.IllegalStrFilterUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +35,12 @@ public class UserService {
         }
         if (StringUtils.isBlank(password)) {
             map.put("msg", "密码不能为空");
+            return map;
+        }
+
+        //防止sql注入攻击
+        if(!IllegalStrFilterUtil.sqlStrFilter(userName) || !IllegalStrFilterUtil.sqlStrFilter(password)){
+            map.put("msg","不安全的输入，请重新输入");
             return map;
         }
 
@@ -78,6 +85,12 @@ public class UserService {
         //密码错误
         if (!user.getPassword().equals(WeiboUtil.MD5(password + user.getSalt()))) {
             map.put("msg", "密码错误!");
+            return map;
+        }
+
+        //防止sql注入攻击
+        if(!IllegalStrFilterUtil.sqlStrFilter(userName) || !IllegalStrFilterUtil.sqlStrFilter(password)){
+            map.put("msg","不安全的输入，请重新输入");
             return map;
         }
 
