@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`
+(
+  `id`       INT unsigned NOT NULL AUTO_INCREMENT,
+  `name`     VARCHAR(64)  NOT NULL DEFAULT '',
+  `password` VARCHAR(64)  NOT NULL DEFAULT '',
+  `salt`     VARCHAR(64)  NOT NULL DEFAULT '',
+  `head_url` VARCHAR(256) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name_UNIQUE`(`name`)
+)ENGINE=InnoDB AUTO_INCREMENT=11 CHARSET=UTF8;
