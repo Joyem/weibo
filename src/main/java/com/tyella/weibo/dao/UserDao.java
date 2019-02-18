@@ -13,7 +13,7 @@ public interface UserDao {
     String SELECT_FIELDS = "id,name,password,salt,head_url";
 
     @Insert({"insert into",TABLE_NAME,"(",INSERT_FIELDS,
-            ")values (#{name},#{password},#{salt},#{headurl})"})
+            ")values (#{name},#{password},#{salt},#{headUrl})"})
     void addUser(User user);
 
     @Select({"select ",SELECT_FIELDS," from ",TABLE_NAME,"where id=#{id}"})

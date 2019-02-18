@@ -15,7 +15,7 @@ public interface NewsDao {
     String SELECT_FIELDS = "id " + INSERT_FIELDS;
 
     @Insert({"insert into ",TABLE_NAME,"(",INSERT_FIELDS,") " +
-            "values(#{title},#{link},#{image},#{create_time},#{user_id},#{comment_count},#{like_count})"})
+            "values(#{title},#{link},#{image},#{createTime},#{userId},#{commentCount},#{likeCount})"})
     void addNews(News news);
 
     @Select({"select ",SELECT_FIELDS," from ",TABLE_NAME,"where id=#{id}"})

@@ -82,7 +82,7 @@ public class NewsController {
             news.setImage(image);
             news.setTitle(title);
             news.setLink(link);
-            news.setCreatedDate(new Date());
+            news.setCreatedTime(new Date());
             if(userHolder.getUser()!=null){
                 news.setUserId(userHolder.getUser().getId());
             }else{

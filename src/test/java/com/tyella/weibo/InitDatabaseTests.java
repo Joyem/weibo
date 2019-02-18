@@ -36,7 +36,7 @@ public class InitDatabaseTests {
         for (int i = 0; i < 11; ++i) {
             User user = new User();
             user.setHeadUrl(String.format("http://images.nowcoder.com/head/%dt.png", random.nextInt(1000)));
-            user.setName(String.format("USER%d", i));
+            user.setName(String.format("USER%d", i+10));
             user.setPassword("");
             user.setSalt("");
             userDao.addUser(user);
@@ -45,7 +45,7 @@ public class InitDatabaseTests {
             news.setCommentCount(i);
             Date date = new Date();
             date.setTime(date.getTime() + 1000 * 3600 * 5 * i);
-            news.setCreatedDate(date);
+            news.setCreatedTime(date);
             news.setImage(String.format("http://images.nowcoder.com/head/%dm.png", random.nextInt(1000)));
             news.setLikeCount(i + 1);
             news.setUserId(i + 1);

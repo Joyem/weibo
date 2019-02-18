@@ -15,7 +15,7 @@ public class News {
 
     private String image;
 
-    private Date createdDate;
+    private Date createdTime;
 
     private int userId;
 
@@ -25,17 +25,6 @@ public class News {
 
     public News(){
 
-    }
-
-    public News(int id, String title, String link, String image, Date createdDate, int userId, int likeCount, int commentCount) {
-        this.id = id;
-        this.title = title;
-        this.link = link;
-        this.image = image;
-        this.createdDate = createdDate;
-        this.userId = userId;
-        this.likeCount = likeCount;
-        this.commentCount = commentCount;
     }
 
     public int getId() {
@@ -70,12 +59,12 @@ public class News {
         this.image = image;
     }
 
-    public Date getCreatedDate() {
-        return createdDate;
+    public Date getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 
     public int getUserId() {
