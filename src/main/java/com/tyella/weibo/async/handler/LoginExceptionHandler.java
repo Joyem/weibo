@@ -29,7 +29,7 @@ public class LoginExceptionHandler implements EventHandler {
     }
 
     @Override
-    public List<EventType> getSupportedEventTypes(){
+    public List<EventType> getSupportEventTypes(){
         return Arrays.asList(EventType.LOGIN);
     }
 }

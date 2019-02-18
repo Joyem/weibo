@@ -39,7 +39,7 @@ public class EventConsumer implements InitializingBean, ApplicationContextAware 
         if(beans!=null){
             //便利所有eventHandler，找出每个handler支持的type
             for(Map.Entry<String,EventHandler> entry:beans.entrySet()){
-                List<EventType> eventTypes =entry.getValue().getSupportedEventTypes();
+                List<EventType> eventTypes =entry.getValue().getSupportEventTypes();
                 //根据type和handler形成映射表，完成map
                 for(EventType type:eventTypes){
                     if(!config.containsKey(type)){
